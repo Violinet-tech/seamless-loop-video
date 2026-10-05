@@ -4,6 +4,8 @@ Agent skill: looping ambient video from a still (MiniMax H3 in ComfyUI), with sc
 
 An agent skill from [VIOLINET Tech](https://github.com/Violinet-tech). It is a folder with a `SKILL.md`, written from a real job and the mistakes made on the way. It works in Claude Code and any harness that reads the `SKILL.md` format, and the markdown is readable as plain docs without an agent.
 
+Page: https://violinet-tech.github.io/seamless-loop-video/
+
 ## Use it when
 
 you want a looping ambient video from a still image (MiniMax H3 in ComfyUI), or a loop jumps at the seam or barely moves.

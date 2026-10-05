@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>seamless-loop-video · VIOLINET Tech</title>
+<meta name="description" content="Turns a still image into a looping ambient video for a web header or background, using MiniMax H3 in ComfyUI.">
+<meta property="og:title" content="seamless-loop-video · VIOLINET Tech"><meta property="og:description" content="Turns a still image into a looping ambient video for a web header or background, using MiniMax H3 in ComfyUI.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--void:#0A0710;--ink:#14101C;--edge:#2A2140;--mute:#B8ADCF;--bone:#F4F1FA;--violet:#A855F7;--orchid:#C89BF5;--accent:#E879F9;
+ --mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--void);color:var(--bone);font:400 1rem/1.65 Inter,system-ui,sans-serif;
+ background-image:radial-gradient(900px 500px at 80% -10%,color-mix(in srgb,var(--accent) 22%,transparent),transparent)}
+.shell{max-width:820px;margin:0 auto;padding:0 20px}
+nav{padding:22px 0;font:500 .7rem var(--mono);letter-spacing:.16em;text-transform:uppercase}
+nav a{color:var(--mute);text-decoration:none;margin-right:18px} nav a:hover{color:var(--orchid)}
+.eyebrow{font:500 .7rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:56px 0 10px}
+h1{font:800 clamp(2.2rem,6vw,3.4rem)/1.05 Syne,sans-serif;margin:0 0 14px;word-break:break-word}
+.lede{color:var(--mute);font-size:1.1rem;margin:0 0 28px}
+.card{border:1px solid var(--edge);border-left:3px solid var(--accent);border-radius:16px;padding:24px;background:rgba(20,16,28,.78);margin:0 0 20px}
+.card p{margin:0;color:var(--mute)} code{font-family:var(--mono);font-size:.88em;color:var(--orchid)}
+.trig{font:400 .82rem/1.6 var(--mono);color:#d8d0e6;background:rgba(255,255,255,.04);border:1px solid var(--edge);border-radius:10px;padding:12px 16px;margin:0 0 20px}
+.trig b{color:var(--accent);font-weight:500}
+h2{font:700 1.15rem Syne,sans-serif;margin:30px 0 10px}
+.cmd{position:relative;background:var(--ink);border:1px solid var(--edge);border-radius:10px;padding:14px 90px 14px 16px;font:400 .8rem/1.5 var(--mono);overflow-x:auto;white-space:pre;color:#e6dff2}
+.cmd button{position:absolute;right:8px;top:8px;font:500 .68rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--bone);background:transparent;border:1px solid var(--edge);border-radius:8px;padding:6px 10px;cursor:pointer}
+.cmd button:hover{border-color:var(--accent)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0}
+.btn{display:inline-block;font:500 .78rem var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--bone);border:1px solid var(--edge);border-radius:99px;padding:10px 18px}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:#0A0710} .btn:hover{border-color:var(--accent)}
+img.cover{width:100%;border-radius:12px;margin:0 0 20px;display:block}
+footer{border-top:1px solid var(--edge);margin-top:48px;padding:24px 0 40px;color:var(--mute);font-size:.88rem}
+footer a{color:var(--orchid)}
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:4px}
+</style></head><body>
+<div class="shell">
+<nav><a href="https://violinettech.ai/skills.html">VIOLINET Tech Skills</a><a href="https://github.com/Violinet-tech/violet-skills">Bundle</a></nav>
+<p class="eyebrow">Agent skill</p>
+<h1>seamless-loop-video</h1>
+<p class="lede">Turn a still into a seamless looping video</p>
+<div class="card"><p>Turns a still image into a looping ambient video for a web header or background, using MiniMax H3 in ComfyUI. It covers the settings that actually produce motion (pinning <code>last_frame</code> back to the source stops the model from moving at all), closing the loop with real frames rather than a fade, and measuring whether it worked. Ships <code>make-loop.py</code>, <code>seamless.py</code> and <code>chain.py</code>.</p></div>
+<div class="trig"><b>Use when:</b> you want a looping background or hero video, "make this image move", or a generated loop visibly jumps or barely moves.</div>
+<h2>Install</h2>
+<div class="cmd"><span id="cmd">git clone https://github.com/Violinet-tech/seamless-loop-video ~/.claude/skills/seamless-loop-video</span><button type="button" onclick="navigator.clipboard.writeText(document.getElementById('cmd').textContent);this.textContent='Copied'">Copy</button></div>
+<p class="lede" style="font-size:.92rem;margin-top:12px">Works in Claude Code and any harness that reads the <code>SKILL.md</code> format. The markdown is also plain docs, readable without an agent.</p>
+<div class="btns"><a class="btn pri" href="https://github.com/Violinet-tech/seamless-loop-video">View on GitHub</a><a class="btn" href="https://github.com/Violinet-tech/seamless-loop-video/blob/master/SKILL.md">Read SKILL.md</a><a class="btn" href="https://github.com/Violinet-tech/violet-skills">All six as one plugin</a></div>
+<footer>MIT licensed. From <a href="https://violinettech.ai">VIOLINET Tech</a>. More skills: <a href="https://github.com/orgs/Violinet-tech/repositories?q=topic%3Aagent-skills">github.com/Violinet-tech</a></footer>
+</div></body></html>
