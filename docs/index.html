@@ -4,6 +4,7 @@
 <title>seamless-loop-video · VIOLINET Tech</title>
 <meta name="description" content="Turns a still image into a looping ambient video for a web header or background, using MiniMax H3 in ComfyUI.">
 <meta property="og:title" content="seamless-loop-video · VIOLINET Tech"><meta property="og:description" content="Turns a still image into a looping ambient video for a web header or background, using MiniMax H3 in ComfyUI.">
+<meta property="og:image" content="https://violinet-tech.github.io/seamless-loop-video/cover.webp"><meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
@@ -39,7 +40,7 @@ footer a{color:var(--orchid)}
 <p class="eyebrow">Agent skill</p>
 <h1>seamless-loop-video</h1>
 <p class="lede">Turn a still into a seamless looping video</p>
-<div class="card"><p>Turns a still image into a looping ambient video for a web header or background, using MiniMax H3 in ComfyUI. It covers the settings that actually produce motion (pinning <code>last_frame</code> back to the source stops the model from moving at all), closing the loop with real frames rather than a fade, and measuring whether it worked. Ships <code>make-loop.py</code>, <code>seamless.py</code> and <code>chain.py</code>.</p></div>
+<div class="card"><img class="cover" src="cover.webp" alt="A man in a charcoal suit walking calmly on a treadmill in an empty marble gallery, a silk scarf floating behind him." loading="lazy"><p>Turns a still image into a looping ambient video for a web header or background, using MiniMax H3 in ComfyUI. It covers the settings that actually produce motion (pinning <code>last_frame</code> back to the source stops the model from moving at all), closing the loop with real frames rather than a fade, and measuring whether it worked. Ships <code>make-loop.py</code>, <code>seamless.py</code> and <code>chain.py</code>.</p></div>
 <div class="trig"><b>Use when:</b> you want a looping background or hero video, "make this image move", or a generated loop visibly jumps or barely moves.</div>
 <h2>Install</h2>
 <div class="cmd"><span id="cmd">git clone https://github.com/Violinet-tech/seamless-loop-video ~/.claude/skills/seamless-loop-video</span><button type="button" onclick="navigator.clipboard.writeText(document.getElementById('cmd').textContent);this.textContent='Copied'">Copy</button></div>
